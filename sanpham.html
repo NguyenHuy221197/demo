@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="index.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Rankyo</title>
+</head>
+<style>
+.texttrang{
+    color: #f2f2f2;
+    padding: 8px auto;
+    position: absolute;
+    bottom: 150px;
+    width: 100%;
+    text-align: left;
+    font-size: 60px;
+    line-height: 65px;
+    font-family: "TimesNewRomanPS-ItalicMT","sans-serif";
+    font-style: italic;
+}
+</style>
+<body>
+    <aside>
+        <header style="text-align:center">
+            <div class="logo">
+                <img src="img/logo.JPG">
+            </div>
+        </header>
+        <main class="narbar">
+            <div class="nav">
+                <ul>
+                 <li><a href="#">Tủ bếp</a></li>
+                 <li><a href="#">Phòng ăn</a></li>
+                 <li><a href="#">Phòng khách</a></li>
+                 <li><a href="#">Phòng ngủ</a></li>
+                 <li><a href="#">Cửa gỗ</a></li>
+                 <li><a href="#">Sàn gỗ</a></li>
+                 <li><a href="#">Thông tin</a></li>
+                 <form>
+                    <i class="fa fa-search" aria-hidden="#"></i>
+                 </form>
+                </ul>
+             </div>
+        </main>
+        <div class="slideshow-container">
+            <!-- Kết hợp hình ảnh và nội dung cho mội phần tử trong slideshow-->
+             <div class="mySlides fade">
+               <div class="numbertext">1 / 3</div>
+               <img src="img/truong-thang-noi-that-phong-an-ban-an-dash-natural-walnut.jpg" style="filter:brightness(60%)">
+               <div class="texttrang">Phòng ăn</div>
+             </div>
+        </div>
+    </aside>
+    <script>
+        // sticky để  giữ thanh navbar
+        var narbar = document.querySelector('.narbar');
+        var origOffsetY = narbar.offsetTop;
+        
+        function onScroll(e) {
+            window.scrollY >= origOffsetY ? narbar.classList.add('sticky') :
+                                        narbar.classList.remove('sticky');
+        }
+        
+        document.addEventListener('scroll', onScroll);
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+<footer>
+    <div class="containerfoodter">
+        <div class="rowfoodter">
+            <div class="col-md-3">
+                <h3>Hệ thống showroom</h3>
+            </div>
+            <div class="col-md-3">
+                <h3>Tư vấn đặt hàng</h3>
+                <p>0908 439 363 - Ext 103 <br>
+                    info@Rankyo.com.vn</p>
+            </div>
+            <div class="col-md-3">
+                <h3>Giao hàng và lắp đặt</h3>
+                <p>0908 439 363 - Ext 105 <br>
+                    info@Rankyo.com.vn</p>
+            </div>
+            <div class="col-md-3">
+                <h3>Dịch vụ khách hàng</h3>
+                <p>0908 439 363 - Ext 106 <br>
+                    info@Rankyo.com.vn</p>
+            </div>
+        </div>
+        <div class="rowfoodter2">
+            <div class="col-md-3">
+                <h3>Sản Phẩm</h3><br>
+                <a href="">Tủ bếp</a><br>
+                <a href="">Cửa gỗ</a><br>
+                <a href="">Sàn gỗ</a><br>
+                <a href="">Phòng ăn</a><br>
+                <a href="">Phòng khách</a><br>
+                <a href="">Phòng ngủ</a>
+            </div>
+            <div class="col-md-3">
+                <h3>Về Chúng Tôi</h3><br>
+                <a href="">Giới thiệu</a><br>
+                <a href="">Đội ngũ</a><br>
+                <a href="">Công trình nổi bật</a><br>
+                <a href="">Blog / Tin tức</a><br>
+                <a href="">Thư viện</a><br>
+                <a href="">Chính sách bảo mật thông tin khách hàng</a>
+            </div>
+            <div class="col-md-3">
+                <h3>Dịch Vụ</h3><br>
+                <a href="">Chìa khóa trao tay</a><br>
+                <a href="">Tư vấn thiết kế</a><br>
+                <a href="">Giao hàng và Lắp đặt</a><br>
+                <a href="">Hướng dẫn và chăm sóc sản phẩm</a><br>
+                <a href="">Chính sách bảo hành</a><br>
+                <a href="">E-Catalogue</a><br>
+                <a href="">FAQ</a>
+            </div>
+            <div class="col-md-3">
+                <h3>Liên hệ</h3><br>
+                <a>Kết nối với chúng tôi</a><br>
+                <div class="icons">
+                    <i class="fa fa-facebook-square" aria-hidden="true"> </i>
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-info" aria-hidden="true"></i>
+                </div>
+                <a>Đăng ký nhận bảng tin</a><br>
+                <input type="text" class="form-control mb-2" placeholder="Họ và tên" required=""><br>
+                <input type="email" class="form-control mb-2" placeholder="Email" required=""><br>
+                <input type="submit" class="btn" value="Đăng ký ngay">
+            </div>
+        </div>
+        <div class="rowfoodter3">
+            <p>Design by huynqps14984@fpt</p>
+        </div>
+    </div>
+</footer>
+</html>
