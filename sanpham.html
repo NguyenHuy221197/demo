@@ -10,9 +10,40 @@
     <title>Rankyo</title>
 </head>
 <style>
+.body{
+  width: 90%;
+  margin:0px auto;
+}
+.row{
+  display: grid;
+  grid-template-areas:
+  "hinhanh noidung" ;
+  grid-template-columns: 762px auto ;
+  margin: 100px auto;
+}
+.noidung{
+  grid-area: noidung; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0px 0px 200px 0px;
+}
+.noidung h2{
+  font-family: "TimesNewRomanPS-ItalicMT","sans-serif";
+  font-style: italic;
+  font-size: 45px;
+  float: left;
+  margin: 0px 0px 0px 60px;
+  color: #3b3b3a;
+}
+.noidung p2{
+  float: left;
+  margin: 0px -64px 0px 60px;
+  color: #3b3b3a;
+}
 .texttrang{
     color: #f2f2f2;
-    padding: 8px auto;
+    margin: 0px 0px 218px 865px;
     position: absolute;
     bottom: 150px;
     width: 100%;
@@ -22,6 +53,32 @@
     font-family: "TimesNewRomanPS-ItalicMT","sans-serif";
     font-style: italic;
 }
+.nav2{
+ margin-top: -17px;
+}
+.nav2 ul{
+  background-color: #ACD038;
+  grid-area: nav2 ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0px 463px 0px 463px;
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.nav2 ul li {
+  list-style: none;
+  margin: 20px 0px 20px 0px;
+}
+.nav2 ul li a{
+  text-decoration-line: none;
+  color: black;
+  font-weight: bold;
+}
+.nav2 ul form {
+  margin: 20px 0px 20px 0px;
+}
+
 </style>
 <body>
     <aside>
@@ -45,6 +102,14 @@
                  </form>
                 </ul>
              </div>
+             <div class="nav2">
+                 <ul>
+                    <li><a href="#">Bàn ăn</a></li>
+                    <li><a href="#">Ghế băng dài</a></li>
+                    <li><a href="#">Ghế ăn</a></li>
+                    <li><a href="#">Tủ Sideboard</a></li>
+                 </ul>
+             </div>
         </main>
         <div class="slideshow-container">
             <!-- Kết hợp hình ảnh và nội dung cho mội phần tử trong slideshow-->
@@ -55,6 +120,23 @@
              </div>
         </div>
     </aside>
+    <section>
+        <div class="body">
+            <div class="mb-md-5 mb-3">
+                <div class="row">
+                    <div class="hinhanh">
+                        <img src="img/pic5.jpg" alt="">
+                    </div>
+                    <div class="noidung">
+                        <h2>Dash</h2>
+                        <h3>Giá: 33.500.000 VNĐ</h3>
+                        <p2> </p2>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
     <script>
         // sticky để  giữ thanh navbar
         var narbar = document.querySelector('.narbar');
