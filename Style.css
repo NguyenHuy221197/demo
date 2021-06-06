@@ -140,7 +140,7 @@
 /* ---------------------------------------------------------- */
 
 .body{
-  width: 70%;
+  /* width: 70%; */
   margin:0px auto;
 }
 .sologan{
@@ -161,10 +161,12 @@
 .row{
   display: grid;
   grid-template-areas:
-  "noidung hinhanh" ;
+  "left right" ;
   grid-template-columns: 570px auto ;
   margin: 75px auto;
 }
+
+/* noi dung */
 .noidung{
   grid-area: noidung; 
   display: flex;
@@ -189,6 +191,8 @@
   flex-direction: column;
   overflow: hidden;
 }
+
+/* hinh anh */
 .hinhanh img{
   width: 762px ;
   -webkit-transition: all 2s ease;
@@ -199,13 +203,13 @@
 .hinhanh img:hover{
   transform: scale(1.2);
 }
-.row2{
+/* .row2{
   display: grid;
   grid-template-areas:
-  "hinhanh noidung" ;
+  "left right" ;
   grid-template-columns: 762px auto ;
   margin: 100px auto;
-}
+} */
 .noidung h2{
   font-family: "TimesNewRomanPS-ItalicMT","sans-serif";
   font-style: italic;
@@ -472,3 +476,38 @@ input.form-control.mb-2{
 }
 
 /* xin chao bạn huy ahihi*/
+
+
+/* new code */
+.line{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-content{
+  width: 40%;
+}
+
+.image-content{
+  width: 60%;
+  overflow: hidden;
+}
+
+.image-content img{
+  width: 80%;
+}
+
+.contain-line{
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.align-right{
+  text-align: right;
+}
+.align-left{
+  text-align: left;
+}
