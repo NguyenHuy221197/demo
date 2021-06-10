@@ -6,6 +6,8 @@
 
 .logo img{
   width: 5%;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 .content{
   margin: 0px;
@@ -337,6 +339,7 @@ input.form-control.mb-2{
   color: #3b3b3a;
 }
 .font-size p{
+  padding-top: 20px;
   font-size: 15px;
   line-height: 20px;
   font-family: "TimesNewRomanPS-ItalicMT","sans-serif";
@@ -377,7 +380,7 @@ input.form-control.mb-2{
 
 
 
-@media (max-width: 1500px) {
+@media (max-width: 1400px) {
   .navbar{
     background-color: #0D3F56;
     margin: 18px 0px 16px 0px;
