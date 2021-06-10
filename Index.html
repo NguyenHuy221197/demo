@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="index.js">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Rankyo</title>
 </head>
-
 <body>
     <aside>
         <header style="text-align:center">
@@ -18,9 +18,12 @@
                 <img src="img/logo.JPG">
             </div>
         </header>
-        <main class="narbar">
-            <div class="nav">
-                <ul>
+        <nav class="navbar">
+            <div class="content">
+              <ul class="menu-list">
+                    <div class="icon cancel-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
                     <li><a href="#">Tủ bếp</a></li>
                     <li><a href="#">Phòng ăn</a></li>
                     <li><a href="#">Phòng khách</a></li>
@@ -32,8 +35,11 @@
                         <i class="fa fa-search" aria-hidden="#"></i>
                     </form>
                 </ul>
+                    <div class="icon menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
             </div>
-        </main>
+        </nav>
         <div class="slideshow-container">
             <!-- Kết hợp hình ảnh và nội dung cho mội phần tử trong slideshow-->
             <div class="mySlides fade">
@@ -68,14 +74,14 @@
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </aside>
-    <article class="body">
+    <article class="body1">
         <div class="sologan">FOR A BETTER LIFE</div>
         <div class="sologan2">Trong cuộc hành trình tìm về với những giá trị tự nhiên, chúng tôi đã tìm thấy GỖ - nguồn
             cảm hứng bất tận cho những tác phẩm nội thất.<br>
             Mọi công việc chúng tôi làm đều mong muốn vượt qua các chuẩn mực hàng ngày và thể hiện niềm đam mê trong
             thiết kế, sản xuất và dịch vụ.</div>
             <br><br><br><br>
-        <main class="content">
+        <main class="content1">
             <div class="main-contain">
                 <div class="line">
                     <div class="contain-line">
@@ -117,7 +123,7 @@
             
                     <div class="align-right image-right">
                         <div class="image-decor align-left">
-                            <img src="img/pic1.jpg">
+                            <img src="img/pic1.jpg" >
                         </div>
                     </div>
                 </div>
@@ -151,7 +157,7 @@
         </div>
         <br><br><br><br>
     </article>
-            <div class="catalogue">
+            <div class="catalogue center">
                 <div class=" image-left "> 
                     <img src="img/truong-thang-e-catalogue.jpg" width="100%">
                     <div class="text-content1 .align-left font-size">
@@ -174,13 +180,14 @@
             <br><br><br><br>
 
     <script>
+       
         // sticky để  giữ thanh navbar
-        var narbar = document.querySelector('.narbar');
+        var narbar = document.querySelector('.content');
         var origOffsetY = narbar.offsetTop;
 
         function onScroll(e) {
-            window.scrollY >= origOffsetY ? narbar.classList.add('sticky') :
-                narbar.classList.remove('sticky');
+            window.scrollY >= origOffsetY ? narbar.classList.add('sticky2') :
+                narbar.classList.remove('sticky2');
         }
 
         document.addEventListener('scroll', onScroll);
@@ -214,6 +221,25 @@
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
         }
+// menu đã reponsive
+
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = ()=>{
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
+        }
+        cancelBtn.onclick = ()=>{
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+        }
+        window.onscroll = ()=>{
+      this.scrollY > 10 ? navbar.classList.add("sticky2") : navbar.classList.remove("sticky2");
+    }
     </script>
 </body>
 <footer>

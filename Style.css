@@ -1,42 +1,72 @@
 
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
 .logo img{
   width: 5%;
 }
-.narbar{
-  margin: -16px 0px -16px 0px;
+.content{
+  margin: 0px;
 }
-.sticky{
+.sticky2{
   position: fixed;
   width: 100%;
   top: 0;
   z-index:100;/*   Chồng lên các thuộc tính khác   */
-  padding: 0px 16px 0px 0px;
+  padding:0px;
 }
-.nav ul{
+.navbar ul{
   background-color: #0D3F56;
-  grid-area: nav ;
+  grid-area: navbar ;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   padding: 0px 350px 0px 405px;
   font-size: medium;
   font-family: Arial, Helvetica, sans-serif;
 }
-.nav ul li {
-  list-style: none;
+
+.navbar ul form {
   margin: 20px 0px 20px 0px;
 }
-.nav ul li a{
-  text-decoration-line: none;
-  color: white;
-}
-.nav ul form {
-  margin: 20px 0px 20px 0px;
-}
-.nav ul form i{
+.navbar ul form i{
   color: white;
 }
 
+.menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+  margin: 20px 0px 20px 0px;
+}
+.menu-list li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+  color: #007bff;
+}
+.menu-list div i{
+  margin: 20px 0px 20px 0px;
+}
+
+.icon{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
 
 /* ---------------------------------- */
 
@@ -139,7 +169,7 @@
   }
 /* ---------------------------------------------------------- */
 
-.body{
+.body1{
   /* width: 70%; */
   margin:0px auto;
 }
@@ -159,49 +189,6 @@
   color: #3b3b3a;
 }
 
-/* .contentpicture{
-  display: grid;
-  grid-template-areas:
-  "pic2 pic1"
-  "pic3 pic1" ;
-  grid-template-columns: 870px auto ;
-
-} */
-/* .pic1 {
-  width: 460px;
-  grid-area: pic1;
-  display: flex;
-  flex-direction: column;
-}
-.pic1:hover{
-  filter: brightness(60%);
-
-}
-.pic2{
-  width: 940px;
-  grid-area: pic2 ;
-  display: flex;
-  flex-direction: column;
-  padding: 0px 112px 39px 0px;
-}
-.pic2:hover{
-  filter: brightness(60%);
-
-}
-.pic3{
-  width: 940px;
-  display: flex;
-  flex-direction: column;
-  padding: 0px 112px 39px 0px;
-}
-.pic3:hover{
-  filter: brightness(60%);
-
-} */
-
-
-
-
 
 
 .containerfoodter{
@@ -214,14 +201,12 @@
 .rowfoodter{   
   background-color: #ACD038;
   justify-content: space-around;
-  padding: 32px 55px 20px 285px;
+  padding: 70px;
   display: flex;
   margin-right: -15px;
   margin-left: -15px; 
 }
-.rowfoodter>div>a{
 
-}
 .col-md-3{
   flex: 0 0 25%;
   max-width: 25%;
@@ -236,7 +221,7 @@
 .rowfoodter2{ 
   background-color: #0D3F56;
   justify-content: space-around;
-  padding: 32px 55px 20px 285px;
+  padding: 70px;
   display: flex;
   margin-right: -15px;
   margin-left: -15px;
@@ -287,8 +272,6 @@ input.form-control.mb-2{
   border-radius:8px;
   border-color: white;
 }
-
-/* xin chao bạn huy ahihi*/
 
 
 /* new code */
@@ -344,7 +327,9 @@ input.form-control.mb-2{
 .image-decor img{
   width: 100%;
 }
-
+.center img{
+  justify-content: center;
+}
 .font-size p1{
   font-size: 45px;
   font-family: "TimesNewRomanPS-ItalicMT","sans-serif";
@@ -388,4 +373,69 @@ input.form-control.mb-2{
 .text-content1{
   width: 70%;
   padding-left: 100px;
+}
+
+
+
+@media (max-width: 1500px) {
+  .navbar{
+    background-color: #0D3F56;
+    margin: 18px 0px 16px 0px;
+  }
+  
+  .navbar.sticky2{
+    background-color: #0D3F56;
+    margin: 18px -16px 16px 0px;
+  }
+  .content{
+    margin: -16px 0px -16px 0px;
+  }
+
+  .content.sticky2{
+    background-color: #0D3F56;
+    margin: 0px -16px 0px 0px;
+  }
+
+  body.disabled{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+    
+  }
+  .icon i{
+    margin: 20px 20px 20px 20px;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #0D3F56;
+    transition: all 0.3s ease;
+    z-index:100;
+  }
+  .navbar.show .menu-list{
+    left: 0%;
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a{
+    margin-left: 0px;
+  }
+
 }
