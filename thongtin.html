@@ -12,10 +12,11 @@
     <title>Rankyo|Thong Tin</title>
 </head>
 <body>
+
     <aside>
         <header style="text-align:center">
             <div class="logo">
-                <img src="img/logo.JPG">
+                <a href="Index.html"><img src="img/logo.JPG"></a>
             </div>
         </header>
         <nav class="navbar">
@@ -25,12 +26,12 @@
                         <i class="fas fa-times"></i>
                     </div>
                     <li><a href="#">Tủ bếp</a></li>
-                    <li><a href="#">Phòng ăn</a></li>
+                    <li><a href="phongan.html">Phòng ăn</a></li>
                     <li><a href="#">Phòng khách</a></li>
                     <li><a href="#">Phòng ngủ</a></li>
                     <li><a href="#">Cửa gỗ</a></li>
                     <li><a href="#">Sàn gỗ</a></li>
-                    <li><a href="#">Thông tin</a></li>
+                    <li><a href="thongtin.html">Thông tin</a></li>
                     <form>
                         <i class="fa fa-search" aria-hidden="#"></i>
                     </form>
@@ -40,8 +41,8 @@
                     </div>
             </div>
         </nav>
-        <div class="imgthongtin" style="max-width:100%;margin: auto;">
-            <img src="img/truong-thang-chia-khoa-trao-tay-06042021.jpg" alt="">
+        <div class="imgthongtin" style="margin: auto;filter:brightness(60%)">
+            <img src="img/truong-thang-chia-khoa-trao-tay-06042021.jpg" width="100%">
         </div>
         
     </aside>
@@ -161,72 +162,41 @@
         </main>
                 <br><br><br><br><br><br>
     </article>
+
     <script>
-       
-        
+    // sticky để  giữ thanh navbar
+            var narbar = document.querySelector('.content');
+            var origOffsetY = narbar.offsetTop;
 
-        // sticky để  giữ thanh navbar
-        var narbar = document.querySelector('.content');
-        var origOffsetY = narbar.offsetTop;
-
-        function onScroll(e) {
-            window.scrollY >= origOffsetY ? narbar.classList.add('sticky2') :
-                narbar.classList.remove('sticky2');
-        }
-
-        document.addEventListener('scroll', onScroll);
-
-
-
-        // slideshow giữ
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+            function onScroll(e) {
+                window.scrollY >= origOffsetY ? narbar.classList.add('sticky2') :
+                    narbar.classList.remove('sticky2');
             }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-// menu đã reponsive
 
-        const body = document.querySelector("body");
-        const navbar = document.querySelector(".navbar");
-        const menuBtn = document.querySelector(".menu-btn");
-        const cancelBtn = document.querySelector(".cancel-btn");
-        menuBtn.onclick = ()=>{
-        navbar.classList.add("show");
-        menuBtn.classList.add("hide");
-        body.classList.add("disabled");
+            document.addEventListener('scroll', onScroll);
+
+
+    // menu đã reponsive
+            const body = document.querySelector("body");
+            const navbar = document.querySelector(".navbar");
+            const menuBtn = document.querySelector(".menu-btn");
+            const cancelBtn = document.querySelector(".cancel-btn");
+            menuBtn.onclick = ()=>{
+            navbar.classList.add("show");
+            menuBtn.classList.add("hide");
+            body.classList.add("disabled");
+            }
+            cancelBtn.onclick = ()=>{
+            body.classList.remove("disabled");
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+            }
+            window.onscroll = ()=>{
+        this.scrollY > 20 ? navbar.classList.add("sticky2") : navbar.classList.remove("sticky2");
         }
-        cancelBtn.onclick = ()=>{
-        body.classList.remove("disabled");
-        navbar.classList.remove("show");
-        menuBtn.classList.remove("hide");
-        }
-        window.onscroll = ()=>{
-      this.scrollY > 10 ? navbar.classList.add("sticky2") : navbar.classList.remove("sticky2");
-    }
     </script>
-</body>
-<style>
+    
+    <style>
     .sologan3{
         text-align: left;
         padding: 50px 400px 50px 400px;
@@ -244,13 +214,21 @@
         font-weight: lighter;
     }
     
-
 </style>
+</body>
+
 <footer>
     <div class="containerfoodter">
         <div class="rowfoodter">
             <div class="col-md-3">
                 <h3>Hệ thống showroom</h3>
+                <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/zzcjjxew.json"
+                    trigger="loop"
+                    colors="primary:#121331,secondary:#000000"
+                    style="width:150px;height:35px">
+                </lord-icon>
             </div>
             <div class="col-md-3">
                 <h3>Tư vấn đặt hàng</h3>
@@ -298,7 +276,7 @@
                 <a href="">FAQ</a>
             </div>
             <div class="col-md-3">
-                <h3>Liên hệ</h3><br>
+                <a href="lienhe.html"><h3>Liên hệ</h3></a><br>
                 <a>Kết nối với chúng tôi</a><br>
                 <div class="icons">
                     <i class="fa fa-facebook-square" aria-hidden="true"> </i>

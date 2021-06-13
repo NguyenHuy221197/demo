@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="index.js">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Rankyo</title>
+</head>
+
+<body>
+
+    <aside>
+        <header style="text-align:center">
+            <div class="logo">
+                <a href="Index.html"><img src="img/logo.JPG"></a>
+            </div>
+        </header>
+        <nav class="navbar">
+            <div class="content">
+              <ul class="menu-list">
+                    <div class="icon cancel-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <li><a href="#">Tủ bếp</a></li>
+                    <li><a href="phongan.html">Phòng ăn</a></li>
+                    <li><a href="#">Phòng khách</a></li>
+                    <li><a href="#">Phòng ngủ</a></li>
+                    <li><a href="#">Cửa gỗ</a></li>
+                    <li><a href="#">Sàn gỗ</a></li>
+                    <li><a href="thongtin.html">Thông tin</a></li>
+                    <form>
+                        <i class="fa fa-search" aria-hidden="#"></i>
+                    </form>
+                </ul>
+                    <div class="icon menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+            </div>
+        </nav>
+        <div class="nav2">
+                 <ul>
+                    <li><a href="#">Bàn ăn</a></li>
+                    <li><a href="#">Ghế băng dài</a></li>
+                    <li><a href="#">Ghế ăn</a></li>
+                    <li><a href="#">Tủ Sideboard</a></li>
+                 </ul>
+             </div>
+        <div class="imgthongtin" style="margin: auto;filter:brightness(60%)">
+            <img src="img/truong-thang-noi-that-phong-an-ban-an-dash-natural-walnut.jpg" width="100%">
+            <div class="texttrang">Phòng ăn</div>
+        </div>
+        <br><br><br><br><br><br>
+        <main class="content1">
+            <div class="main-contain">
+                <div class="line">
+                    <div class="contain-line">
+                        <div class="image-content"> <img src="img/pic5.jpg"alt=""></div>
+                        <div class="text-content .align-left font-size">
+                            <p1>Dash</p1><br>
+                            <h style="font-style: italic;font-size: 28px;" >Giá: 33.500.000 VNĐ</h><br><br>
+                            <h style=" font-size: 20px; text-decoration: underline;" >Thông tin sản phẩm</h><br><br>
+                            <h style="line-height: 30px;font-weight: bold; font-size: 20px;" >Chất liệu và màu sắc</h><br>
+                        
+                            <div class="ChatLieuKichThuoc">
+                                <div class="ChatLieu">
+                                    <div class="boxChatlieu1">
+                                        <img src="img/Flat-H-Walnut-copy-700x465.jpg" alt="">
+                                    </div>
+                                    <div class="boxChatlieu2">
+                                        <img src="img/Flat-H-natural-copy-700x465.jpg" alt="">
+                                    </div>
+                                
+                                    <div class="KichThuoc">
+                                        <p5>Kích thước</p5>
+                                        <select style="">
+                                            <option>W1800 x H745 x D900 mm</option>
+                                            <option>W2000 x H745 x D900 mm</option>
+                                            <option>W2400 x H745 x D900 mm</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div></div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <br><br><br><br><br><br>
+<style>
+    .ChatLieuKichThuoc{
+        width: 80%;
+    }
+    .ChatLieu{
+        display: grid;
+        grid-template-areas:
+            "boxChatlieu1 boxChatlieu2 KichThuoc";   
+    }
+    .ChatLieu div img {
+        width: 50%;
+        height: 34px;
+        background-size: cover;
+    }
+    .bigbox{
+        width: 80%;
+        margin: 0px auto;
+        text-align: center;
+    }
+    
+    .box{
+        display: grid;
+        grid-template-areas:
+            "p1 p2"
+            "p3 p4" ;
+        grid-template-columns: auto ;    
+        margin: 15px auto;
+    }
+    
+    .box div p{
+        padding-top: 10px;
+        padding-bottom: 60px;
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        align-items: center;
+    }
+    
+    
+    .texttrang{
+        color: white;
+        position: absolute;
+        bottom: 150px;
+        width: 100%;
+        text-align: left;
+        font-size: 60px;
+        line-height: 65px;
+        font-family: "TimesNewRomanPS-ItalicMT","sans-serif";
+        font-style: italic;
+    }
+    .nav2{
+        margin-top: 0px;
+    }
+    .nav2 ul{
+        background-color: #ACD038;
+        grid-area: nav2 ;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0px 463px 0px 463px;
+        font-size: medium;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .nav2 ul li {
+        list-style: none;
+        margin: 20px 0px 20px 0px;
+    }
+    .nav2 ul li a{
+        text-decoration-line: none;
+        color: black;
+        font-weight: bold;
+    }
+    .nav2 ul form {
+        margin: 20px 0px 20px 0px;
+    }
+    @media (max-width: 1400px) {
+        .nav2 ul{
+        background-color: #ACD038;
+        grid-area: nav2 ;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: medium;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0px;
+        }
+    }
+</style>
+<footer>
+    <div class="containerfoodter">
+        <div class="rowfoodter">
+            <div class="col-md-3">
+                <h3>Hệ thống showroom</h3>
+                <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/zzcjjxew.json"
+                    trigger="loop"
+                    colors="primary:#121331,secondary:#000000"
+                    style="width:150px;height:35px">
+                </lord-icon>
+            </div>
+            <div class="col-md-3">
+                <h3>Tư vấn đặt hàng</h3>
+                <p>0908 439 363 - Ext 103 <br>
+                    info@Rankyo.com.vn</p>
+            </div>
+            <div class="col-md-3">
+                <h3>Giao hàng và lắp đặt</h3>
+                <p>0908 439 363 - Ext 105 <br>
+                    info@Rankyo.com.vn</p>
+            </div>
+            <div class="col-md-3">
+                <h3>Dịch vụ khách hàng</h3>
+                <p>0908 439 363 - Ext 106 <br>
+                    info@Rankyo.com.vn</p>
+            </div>
+        </div>
+        <div class="rowfoodter2">
+            <div class="col-md-3">
+                <h3>Sản Phẩm</h3><br>
+                <a href="">Tủ bếp</a><br>
+                <a href="">Cửa gỗ</a><br>
+                <a href="">Sàn gỗ</a><br>
+                <a href="">Phòng ăn</a><br>
+                <a href="">Phòng khách</a><br>
+                <a href="">Phòng ngủ</a>
+            </div>
+            <div class="col-md-3">
+                <h3>Về Chúng Tôi</h3><br>
+                <a href="">Giới thiệu</a><br>
+                <a href="">Đội ngũ</a><br>
+                <a href="">Công trình nổi bật</a><br>
+                <a href="">Blog / Tin tức</a><br>
+                <a href="">Thư viện</a><br>
+                <a href="">Chính sách bảo mật thông tin khách hàng</a>
+            </div>
+            <div class="col-md-3">
+                <h3>Dịch Vụ</h3><br>
+                <a href="">Chìa khóa trao tay</a><br>
+                <a href="">Tư vấn thiết kế</a><br>
+                <a href="">Giao hàng và Lắp đặt</a><br>
+                <a href="">Hướng dẫn và chăm sóc sản phẩm</a><br>
+                <a href="">Chính sách bảo hành</a><br>
+                <a href="">E-Catalogue</a><br>
+                <a href="">FAQ</a>
+            </div>
+            <div class="col-md-3">
+                <a href="lienhe.html"><h3>Liên hệ</h3></a><br>
+                <a>Kết nối với chúng tôi</a><br>
+                <div class="icons">
+                    <i class="fa fa-facebook-square" aria-hidden="true"> </i>
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-info" aria-hidden="true"></i>
+                </div>
+                <a>Đăng ký nhận bảng tin</a><br>
+                <input type="text" class="form-control mb-2" placeholder="Họ và tên" required=""><br>
+                <input type="email" class="form-control mb-2" placeholder="Email" required=""><br>
+                <input type="submit" class="btn" value="Đăng ký ngay">
+            </div>
+        </div>
+        <div class="rowfoodter3">
+            <p>Design by huynqps14984@fpt</p>
+        </div>
+    </div>
+</footer>
+</html>

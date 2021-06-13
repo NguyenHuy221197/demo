@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="index.js">
+    <script src="index.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -15,7 +15,7 @@
     <aside>
         <header style="text-align:center">
             <div class="logo">
-                <img src="img/logo.JPG">
+                <a href="Index.html"><img src="img/logo.JPG"></a>
             </div>
         </header>
         <nav class="navbar">
@@ -25,7 +25,7 @@
                         <i class="fas fa-times"></i>
                     </div>
                     <li><a href="#">Tủ bếp</a></li>
-                    <li><a href="#">Phòng ăn</a></li>
+                    <li><a href="phongan.html">Phòng ăn</a></li>
                     <li><a href="#">Phòng khách</a></li>
                     <li><a href="#">Phòng ngủ</a></li>
                     <li><a href="#">Cửa gỗ</a></li>
@@ -92,10 +92,11 @@
                                 sản xuất đồ nội thất chất lượng cao từ nguồn gỗ bền vững, thân thiện và tạo ra những trải nghiệm khác biệt
                                 đầy ý nghĩa.</p>
                         </div>
-                        <div class="image-content align-right"> <img
-                                src="img/truong-thang-tu-bep-floating-light-oak-dairy-l.jpg" alt=""></div>
+                        <div class="image-content align-right"> 
+                            <img src="img/truong-thang-tu-bep-floating-light-oak-dairy-l.jpg" alt=""></div>
                     </div>
                 </div>
+                <br><br>
                 <div class="line">
                     <div class="contain-line">
                         <div class="image-content"> <img src="img/truong-thang-giuong-ngu-refill-natural-walnut.jpg"alt=""></div>
@@ -112,7 +113,7 @@
             </div>
         </main>
         <br><br><br><br>
-        <main class="line">
+        <!-- <main class="line">
                 <div class="align-left image-left">
                     <div class="image-decor align-right">
                         <div> <img src="img/pic2.jpg"></div><br>
@@ -127,7 +128,26 @@
                         </div>
                     </div>
                 </div>
-        </main>
+        </main> -->
+        <div class="khunghinh">
+            <div class="sokhung">
+                
+                <div class="h2">
+                    <img src="img/pic2.jpg" alt="">
+                </div>
+                <div class="h1">
+                    <img src="img/pic1.jpg" alt="">
+                </div>
+                <div class="h3">
+                    <img src="img/pic3.jpg" alt="">
+                </div>
+                
+            </div>
+        </div>
+        <style>
+            
+        </style>
+        <br><br><br><br>
         <br><br><br><br>
         <div class="line">
             <div class="contain-line">
@@ -156,6 +176,7 @@
             </div>
         </div>
         <br><br><br><br>
+        <br><br><br><br>
     </article>
             <div class="catalogue center">
                 <div class=" image-left "> 
@@ -167,10 +188,10 @@
                             nhất cho ngôi nhà của mình.</p>
                     </div>
                 </div>
-                <div class="image-right ">
-                    <img style="text-align: center" src="img/truong-thang-cap-nhat-ban-tin.jpg" width="80%" >
-                    <div class="text-content1 .align-right font-size">
-                        <p1>Cập nhật bản tin</p1>
+                <div class="image-right" align ="center">
+                    <img src="img/truong-thang-cap-nhat-ban-tin.jpg" width="100%" >
+                    <div class="text-content1 .align-right font-size" style="text-align: left; padding-left: 10px;">
+                        <p1 >Cập nhật bản tin</p1>
                         <p>Đăng ký nhận bản tin tại đây để cập nhật sớm nhất những chương trình ưu đãi hấp dẫn, 
                             thông tin sản phẩm mới và bài viết hữu ích mà bạn không thể bỏ lỡ.</p>
                     </div>
@@ -178,9 +199,7 @@
                 </div>
             </div>
             <br><br><br><br>
-
     <script>
-       
         // sticky để  giữ thanh navbar
         var narbar = document.querySelector('.content');
         var origOffsetY = narbar.offsetTop;
@@ -247,6 +266,14 @@
         <div class="rowfoodter">
             <div class="col-md-3">
                 <h3>Hệ thống showroom</h3>
+                <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/zzcjjxew.json"
+                    trigger="loop"
+                    colors="primary:#121331,secondary:#000000"
+                    style="width:150px;height:35px">
+                </lord-icon>
+                
             </div>
             <div class="col-md-3">
                 <h3>Tư vấn đặt hàng</h3>
@@ -294,7 +321,7 @@
                 <a href="">FAQ</a>
             </div>
             <div class="col-md-3">
-                <h3>Liên hệ</h3><br>
+                <a href="lienhe.html"><h3>Liên hệ</h3></a><br>
                 <a>Kết nối với chúng tôi</a><br>
                 <div class="icons">
                     <i class="fa fa-facebook-square" aria-hidden="true"> </i>
