@@ -252,6 +252,10 @@
 width: 50px;
 font-size: 30px;
 }
+.icons>img{
+  width: 50px;
+  padding-right: 10px;
+  }
 input.form-control.mb-2{
   background-color: transparent;
   font-family: 'Times New Roman', Times, serif;
